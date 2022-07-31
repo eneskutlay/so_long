@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "so_long.h"
+
 void	fill_p(t_data *m, int x, int y)
 {
 	int	row;
@@ -101,17 +103,17 @@ void	fill_map(t_data *mlx)
 			&mlx->width, &mlx->height);
 	mlx->img_0 = mlx_xpm_file_to_image(mlx->mlx, "xpm/square.xpm",
 			&mlx->width, &mlx->height);
-	mlx->img_c = mlx_xpm_file_to_image(mlx->mlx, "xpm/gold.xpm",
+	mlx->img_c = mlx_xpm_file_to_image (mlx->mlx, "xpm/gold.xpm",
 			&mlx->width, &mlx->height);
 	mlx->img_p = mlx_xpm_file_to_image(mlx->mlx, "xpm/spider.xpm",
 			&mlx->width, &mlx->height);
 	mlx->img_e = mlx_xpm_file_to_image(mlx->mlx, "xpm/close.xpm",
 			&mlx->width, &mlx->height);
-	mlx->p_row = get_p_row(mlx 'P');
-	mlx->p_col = get_p_col(mlx 'P');
+	mlx->p_row = get_p_row(mlx, 'P');
+	mlx->p_col = get_p_col(mlx, 'P');
 	fill_p(mlx, 0, 0);
 	fill_1_0(mlx);
 	fill_c_e(mlx);
-	hook(mlx);
+	catch_hook(mlx);
 	mlx_loop(mlx);
 }

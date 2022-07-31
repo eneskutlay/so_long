@@ -6,11 +6,11 @@
 /*   By: ekutlay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 23:28:42 by ekutlay           #+#    #+#             */
-/*   Updated: 2022/06/02 15:43:29 by ekutlay          ###   ########.fr       */
+/*   Updated: 2022/07/31 03:51:29 by ekutlay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "so_long.h"
 
 size_t	ft_strlen(char *s)
 {

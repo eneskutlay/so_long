@@ -6,7 +6,7 @@
 /*   By: ekutlay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 02:43:11 by ekutlay           #+#    #+#             */
-/*   Updated: 2022/07/31 00:55:00 by ekutlay          ###   ########.fr       */
+/*   Updated: 2022/07/31 03:36:11 by ekutlay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,34 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 4
 # endif
+
+typedef struct s_data {
+	void	*mlx;
+	void	*mlx_win;
+	void	*img_1;
+	void	*img_0;
+	void	*img_p;
+	void	*img_e;
+	void	*img_c;
+	void	*img_y;
+	int		width;
+	int		height;
+	char	**map;
+	int		col_len;
+	int		row_len;
+	int		p_col;
+	int		p_row;
+	int		lap;
+	char	*player;
+	char	key;
+	int		c;
+	int		e_col;
+	int		e_row;
+	int		exit;
+	int		moves;
+}				t_data;
+
+size_t	ft_strlen_lib(const char *s);
 
 void	check_ber(char *argv);
 
@@ -53,4 +81,19 @@ void	fill_map(t_data *mlx);
 
 void	set_key(t_data *mlx);
 void	fill_p_act(t_data *mlx);
+
+int		close_window(t_data *mlx);
+void	catch_moves(t_data *mlx);
+int		key_hook(int key, t_data *mlx);
+int		catch_hook(t_data *mlx);
+
+int		transformaitor(t_data *mlx, int row, int col);
+void	check_key_s_d(t_data *mlx, int row, int col);
+void	check_key_a_w(t_data *mlx, int row, int col);
+int		get_p_row(t_data *mlx, char c);
+int		get_p_col(t_data *mlx, char c);
+
+void	initialize(t_data *m, char *str);
+int		create_map(t_data *m, char *str);
+int		main(int argc, char **argv);
 #endif

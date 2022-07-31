@@ -6,11 +6,11 @@
 /*   By: ekutlay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 23:48:06 by ekutlay           #+#    #+#             */
-/*   Updated: 2022/06/02 17:21:50 by ekutlay          ###   ########.fr       */
+/*   Updated: 2022/07/31 03:54:31 by ekutlay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "so_long.h"
 
 char	*ft_fit_buff(int fd, char *left_str)
 {
