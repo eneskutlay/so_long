@@ -12,7 +12,7 @@
 
 #include "so_long.h"
 
-void	check_perimeter(t_data *m)
+void	check_window(t_data *m)
 {
 	int	row;
 	int	col;
@@ -25,13 +25,13 @@ void	check_perimeter(t_data *m)
 		{
 			if (m->map[0][col] != '1' || m->map[m->row_len - 1][col] != '1')
 			{
-				write(1, "Error\n", 6);
+				write(1, "Window Error\n", 13);
 				exit (0);
 			}
 			else if (m->map[row][0] != '1'
 					|| m->map[row][m->col_len -1] != '1')
 			{
-				write(1, "Error\n", 6);
+				write(1, "Window Error\n", 13);
 				exit (0);
 			}
 			col++;
@@ -40,7 +40,7 @@ void	check_perimeter(t_data *m)
 	}
 }
 
-void	check_values3(t_data *m, int row)
+void	check_all_characters(t_data *m, int row)
 {
 	int	col;
 
@@ -53,7 +53,7 @@ void	check_values3(t_data *m, int row)
 					&& m->map[row][col] != 'C' && m->map[row][col] != 'P'
 					&& m->map[row][col] != 'E')
 			{
-				write(1, "Error\n", 6);
+				write(1, "Characters Error\n", 17);
 				exit (0);
 			}
 			col++;
@@ -62,7 +62,7 @@ void	check_values3(t_data *m, int row)
 	}
 }
 
-void	check_values2(t_data *m, int row)
+void	check_start_position(t_data *m, int row)
 {
 	int	col;
 	int	p;
@@ -81,12 +81,12 @@ void	check_values2(t_data *m, int row)
 	}
 	if (p > 1)
 	{
-		write(1, "Error\n", 6);
+		write(1, "Start Position Error\n", 21);
 		exit (0);
 	}
 }
 
-void	check_values1(t_data *m, int row)
+void	check_exit_gold(t_data *m, int row)
 {
 	int	e;
 	int	col;
@@ -107,15 +107,15 @@ void	check_values1(t_data *m, int row)
 	}
 	if (e > 1 || m->c < 1)
 	{
-		write(1, "Error\n", 6);
+		write(1, "Exit or Gold Error\n", 19);
 		exit (0);
 	}
 }
 
 void	check_errors(t_data *mlx)
 {
-	check_perimeter(mlx);
-	check_values1(mlx, 0);
-	check_values2(mlx, 0);
-	check_values3(mlx, 0);
+	check_window(mlx);
+	check_exit_gold(mlx, 0);
+	check_start_position(mlx, 0);
+	check_all_characters(mlx, 0);
 }

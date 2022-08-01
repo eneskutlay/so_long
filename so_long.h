@@ -68,10 +68,10 @@ void	check_if_c(t_data *mlx, int row, int col);
 void	move_player(t_data *mlx, int row, int col);
 void	free_map(t_data **mlx);
 
-void	check_perimeter(t_data *m);
-void	check_values3(t_data *m, int row);
-void	check_values2(t_data *m, int row);
-void	check_values1(t_data *m, int row);
+void	check_window(t_data *m);
+void	check_all_characters(t_data *m, int row);
+void	check_start_position(t_data *m, int row);
+void	check_exit_gold(t_data *m, int row);
 void	check_errors(t_data *mlx);
 
 void	fill_p(t_data *m, int x, int y);

@@ -6,7 +6,7 @@
 #    By: ekutlay <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/31 03:21:27 by ekutlay           #+#    #+#              #
-#    Updated: 2022/07/31 03:56:06 by ekutlay          ###   ########.fr        #
+#    Updated: 2022/07/31 04:57:27 by ekutlay          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,6 @@ all : $(NAME)
 
 $(NAME) : $(SRC)
 	$(CC) $(FLAGS) $(SRC) -Lmlx -lmlx -framework OpenGL -framework AppKit -o $(NAME)
-	@ echo "so_long compiled 🐒"
 
 clean:
 	@ rm -rf so_long
@@ -37,7 +36,6 @@ clean:
 fclean: clean
 	@rm -rf so_long
 	@rm -rf so_long.dSYM
-	@ echo "so_long cleaned 🧤"
 
 re: fclean all
 
