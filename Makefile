@@ -6,7 +6,7 @@
 #    By: ekutlay <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/31 03:21:27 by ekutlay           #+#    #+#              #
-#    Updated: 2022/07/31 04:57:27 by ekutlay          ###   ########.fr        #
+#    Updated: 2022/08/02 00:37:07 by ekutlay          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,9 +28,11 @@ SRC  = catch_hook.c \
 all : $(NAME)
 
 $(NAME) : $(SRC)
+	make -C ./mlx
 	$(CC) $(FLAGS) $(SRC) -Lmlx -lmlx -framework OpenGL -framework AppKit -o $(NAME)
 
 clean:
+	make -C ./mlx clean
 	@ rm -rf so_long
 
 fclean: clean
