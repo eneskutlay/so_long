@@ -79,7 +79,7 @@ void	check_start_position(t_data *m, int row)
 		}
 		row++;
 	}
-	if (p > 1)
+	if (p != 1)
 	{
 		write(1, "Start Position Error\n", 21);
 		exit (0);
@@ -105,7 +105,7 @@ void	check_exit_gold(t_data *m, int row)
 		}
 		row++;
 	}
-	if (e > 1 || m->c < 1)
+	if (e != 1 || m->c < 1)
 	{
 		write(1, "Exit or Gold Error\n", 19);
 		exit (0);
@@ -115,7 +115,7 @@ void	check_exit_gold(t_data *m, int row)
 void	check_errors(t_data *mlx)
 {
 	check_window(mlx);
-	check_exit_gold(mlx, 0);
-	check_start_position(mlx, 0);
 	check_all_characters(mlx, 0);
+	check_start_position(mlx, 0);
+	check_exit_gold(mlx, 0);
 }

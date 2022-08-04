@@ -32,7 +32,7 @@ void	check_ber(char *argv)
 		e++;
 	if (e != 0)
 	{
-		write (1, "Error\n", 6);
+		write (1, "Map Error\n", 10);
 		exit (0);
 	}
 }

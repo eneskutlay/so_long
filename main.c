@@ -77,10 +77,10 @@ int	main(int argc, char **argv)
 		exit (0);
 	}
 	str = argv[1];
+	check_ber(str);
 	initialize(&m, str);
 	create_map(&m, str);
 	m.col_len -= 1;
-	check_ber(str);
 	check_errors(&m);
 	fill_map(&m);
 	return (0);
