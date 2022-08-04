@@ -6,7 +6,7 @@
 /*   By: ekutlay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 02:52:35 by ekutlay           #+#    #+#             */
-/*   Updated: 2022/07/31 03:09:34 by ekutlay          ###   ########.fr       */
+/*   Updated: 2022/08/05 00:25:01 by ekutlay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int	main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		write(1, "Error\n", 6);
+		write(1, "ARGV Error\n", 12);
 		exit (0);
 	}
 	str = argv[1];

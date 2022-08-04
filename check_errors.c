@@ -6,7 +6,7 @@
 /*   By: ekutlay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 23:23:37 by ekutlay           #+#    #+#             */
-/*   Updated: 2022/07/30 23:39:53 by ekutlay          ###   ########.fr       */
+/*   Updated: 2022/08/05 00:24:38 by ekutlay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	check_start_position(t_data *m, int row)
 	}
 	if (p != 1)
 	{
-		write(1, "Start Position Error\n", 21);
+		write(1, "Player Error\n", 13);
 		exit (0);
 	}
 }
